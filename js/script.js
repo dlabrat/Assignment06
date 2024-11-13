@@ -23,15 +23,15 @@ form.addEventListener('submit', (e) => {
     let department = document.getElementById('department').value;
 
     // INSERT A NEW ROW AT THE END OF THE EMPLOYEES TABLE
-    let newRow = table.insertRow(-1);
+    let row = table.insertRow(-1);
 
     // INSERT A CELL FOR EACH ITEM WITHIN THE NEW ROW
-    let cellId = newRow.insertCell(0);
-    let cellName = newRow.insertCell(1);
-    let cellExtension = newRow.insertCell(2);
-    let cellEmail = newRow.insertCell(3);
-    let cellDepartment = newRow.insertCell(4);
-    let cellDelete = newRow.insertCell(5);
+    let cellId = row.insertCell(0);
+    let cellName = row.insertCell(1);
+    let cellExtension = row.insertCell(2);
+    let cellEmail = row.insertCell(3);
+    let cellDepartment = row.insertCell(4);
+    let cellDelete = row.insertCell(5);
 
     // APPEND THE TEXT VALUES AS TEXT NODES WITHIN THE CELLS
     cellId.textContent = id;

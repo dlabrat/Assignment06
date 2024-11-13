@@ -25,22 +25,20 @@ form.addEventListener('submit', (e) => {
     // INSERT A NEW ROW AT THE END OF THE EMPLOYEES TABLE
     let row = table.insertRow(-1);
 
-    // INSERT A CELL FOR EACH ITEM WITHIN THE NEW ROW
+    // INSERT A CELL FOR EACH ITEM WITHIN THE NEW ROW AND APPEND TEXT NODES
     let cellId = row.insertCell(0);
+    cellId.appendChild(document.createTextNode(id));
     let cellName = row.insertCell(1);
+    cellName.appendChild(document.createTextNode(name));
     let cellExtension = row.insertCell(2);
+    cellExtension.appendChild(document.createTextNode(extension));
     let cellEmail = row.insertCell(3);
+    cellEmail.appendChild(document.createTextNode(email));
     let cellDepartment = row.insertCell(4);
-    let cellDelete = row.insertCell(5);
-
-    // APPEND THE TEXT VALUES AS TEXT NODES WITHIN THE CELLS
-    cellId.textContent = id;
-    cellName.textContent = name;
-    cellExtension.textContent = extension;
-    cellEmail.textContent = email;
-    cellDepartment.textContent = department;
+    cellDepartment.appendChild(document.createTextNode(department));
 
     // CREATE THE DELETE BUTTON
+    let cellDelete = row.insertCell(5);
     let deleteBtn = document.createElement('button');
     deleteBtn.className = 'btn btn-danger btn-sm';
     deleteBtn.textContent = 'Delete';
